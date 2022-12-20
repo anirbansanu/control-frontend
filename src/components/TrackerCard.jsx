@@ -13,9 +13,14 @@ export default class TrackerCard extends Component {
                             {this.props.lgTitle}
                         </h5>
                     </Card.Title>
-                    <Card.Text className="mdl-text-card" style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-                        <font className="mdl-text" style={{textAlign:"center",fontSize: this.props.mainFontSize? this.props.mainFontSize:"3.8"}}>{this.props.main}</font>
-                    </Card.Text>
+                    
+                        {/* 
+                            <font className="mdl-text" style={{textAlign:"center",fontSize: this.props.mainFontSize? this.props.mainFontSize:"3.8"}}>{this.props.main}</font> 
+                        */}
+                        <div className="w-100 h-100 d-flex justify-content-center">
+                            <i className={this.props.icon?this.props.icon:"fa-solid fa-power-off"} style={{fontSize: "5rem"}}></i>
+                        </div> 
+                    
                 </Card.Body>
             </Card>
         )
