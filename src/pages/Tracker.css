@@ -1,0 +1,64 @@
+body{
+    background: #131313 !important;
+}
+.card{
+    border-radius: 8px;
+    color: rgb(241, 233, 233);
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    overflow: hidden;
+    transition: 0.25s;
+    cursor: pointer;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */      
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 50%;
+    height:100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.14), transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.3s;
+}
+.card:hover:before{
+transform: skewX(45deg) translateX(200%);
+}
+.card-title{
+    letter-spacing: 2px;
+}
+
+.card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(253, 251, 251, 0.12), 0 4px 8px rgba(255,255,255,.06);
+   
+}
+.mdl-text-card{
+    text-overflow: ellipsis;
+}
+.mdl-text{
+    font-weight: bolder;
+    letter-spacing: 3px;
+    
+}
+.modal-content{
+    background: rgb(36, 35, 35) !important;
+    color: rgb(223, 222, 222) !important;
+}
+.modal-btn-close{
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    padding: 0.1em 0.1em;
+    border-radius: 0.25rem;
+    color: rgb(255, 255, 255) !important;
+    background-color: transparent !important;
+    opacity: 0.9;
+}
+.modal-btn-close:hover{
+    background-color: rgb(40,40,40) !important;
+}
