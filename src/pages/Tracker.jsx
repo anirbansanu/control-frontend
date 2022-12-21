@@ -56,7 +56,7 @@ export default class Tracker extends Component {
                 <Row >
                     <Col className="p-2" style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
                         <h2 className="p-2 text-light">
-                                Covid-19 Tracker &nbsp;
+                                Controller &nbsp;
                                 <font style={{fontSize: "1.8rem"}}>
                                     <Badge className="glow" pill bg="danger">
                                         Live
@@ -67,32 +67,32 @@ export default class Tracker extends Component {
                 </Row>
                 <Row>
                     <Col className="mt-3" sm={6} md={6} lg={4} onClick={() => this.setState({showModal:true})}>
-                        <TrackerCard bg="#fa8231" smTitle="SELECT" lgTitle='STATE' mainFontSize='2.5rem' tooltip={this.state.stateName} main={this.state.stateName.substr(0, 11)}/>
+                        <TrackerCard bg="#fa8231" smTitle="Power" lgTitle='On/Off' mainFontSize='2.5rem' tooltip={this.state.stateName} main={this.state.stateName.substr(0, 11)}/>
                     </Col>
                     <Col className="mt-3" sm={6} md={6} lg={4}>
-                        <TrackerCard bg="#20bf6b" smTitle="TOTAL" lgTitle='TESTED' mainFontSize='3rem' main={this.state.stateData.tested}/>
+                        <TrackerCard bg="#20bf6b" smTitle="Controller" lgTitle='Start' mainFontSize='3rem' main={this.state.stateData.tested}/>
                     </Col>
                     <Col className="mt-3" sm={6} md={6} lg={4}>
-                        <TrackerCard bg="#f7b731" smTitle="TOTAL" lgTitle='CONFIRMED' mainFontSize='3rem' main={this.state.stateData.confirmed}/>
+                        <TrackerCard bg="#f7b731" smTitle="Controller" lgTitle='Stop' mainFontSize='3rem' main={this.state.stateData.confirmed}/>
                     </Col>
                 
                     <Col className="mt-3" sm={6} md={6} lg={4}>
-                        <TrackerCard bg="#2d98da" smTitle="TOTAL" lgTitle='DEATHS' mainFontSize='3rem' main={this.state.stateData.deceased}/>
+                        <TrackerCard bg="#2d98da" smTitle="Open" lgTitle='CHROME' icon={"fa-brands fa-chrome"} mainFontSize='3rem' main={this.state.stateData.deceased}/>
                     </Col>
                     <Col className="mt-3" sm={6} md={6} lg={4}>
-                        <TrackerCard bg="#a55eea" smTitle="TOTAL" lgTitle='RECOVERED' mainFontSize='3rem' main={this.state.stateData.recovered}/>
+                        <TrackerCard bg="#a55eea" smTitle="Close" lgTitle='CHROME' icon={"fa-brands fa-chrome"} mainFontSize='3rem' main={this.state.stateData.recovered}/>
                     </Col>
                     <Col className="mt-3" sm={6} md={6} lg={4}>
-                        <TrackerCard bg="#eb3b5a" smTitle="LAST" lgTitle='UPDATED' mainFontSize='2.4rem' main={this.state.stateMeta.date}/>
+                        <TrackerCard bg="#eb3b5a" smTitle="Open" lgTitle='VS CODE' icon={"fa-solid fa-code"} mainFontSize='2.4rem' main={this.state.stateMeta.date}/>
                     </Col>
                     <Col className="mt-3" sm={6} md={6} lg={4}>
-                        <TrackerCard bg="#5f27cd" smTitle="FIRST" lgTitle='VACCIN' mainFontSize='3rem' main={this.state.stateData.vaccinated1}/>
+                        <TrackerCard bg="#5f27cd" smTitle="Close" lgTitle='VS CODE' icon={"fa-solid fa-code"} mainFontSize='3rem' main={this.state.stateData.vaccinated1}/>
                     </Col>
                     <Col className="mt-3" sm={6} md={6} lg={4}>
-                        <TrackerCard bg="#2d98da" smTitle="LAST" lgTitle='VACCINATED' mainFontSize='3rem' main={this.state.stateData.vaccinated2}/>
+                        <TrackerCard bg="#2d98da" smTitle="Kill" lgTitle='PROGRAM' icon={"fa-solid fa-skull-crossbones"} mainFontSize='3rem' main={this.state.stateData.vaccinated2}/>
                     </Col>
                     <Col className="mt-3" sm={6} md={6} lg={4} onClick={() => this.setState({showModal:true})}>
-                        <TrackerCard bg="#fa8231" smTitle="SELECT" lgTitle='STATE' mainFontSize='2.5rem' tooltip={this.state.stateName} main={this.state.stateName.substr(0, 11)}/>
+                        <TrackerCard bg="#fa8231" smTitle="Custom" lgTitle='MODAL' icon={"fa-solid fa-medal"} mainFontSize='2.5rem' tooltip={this.state.stateName} main={this.state.stateName.substr(0, 11)}/>
                     </Col>
                 </Row>
                 <TrackerModal stateWise={this.state.data} handleCovidDataByState={this.handleCovidDataByState} title="Choose States" show={this.state.showModal} onHide={() => this.setState({showModal:false})}/>

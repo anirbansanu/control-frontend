@@ -10,7 +10,7 @@ export default class TrackerCard extends Component {
                     <Card.Title style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
                         <h5 >
                             <font style={{fontSize: "0.8rem",float:"bottom"}}>{this.props.smTitle}</font>
-                            {this.props.lgTitle}
+                            <b style={{fontWeight: "950"}}>{this.props.lgTitle}</b>
                         </h5>
                     </Card.Title>
                     
